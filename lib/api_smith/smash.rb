@@ -195,7 +195,7 @@ module APISmith
     # as a hash index. If you want to, for example, add leading underscores,
     # you're do so here.
     def default_key_transformation(key)
-      key.to_s
+      key
     end
 
     # Given a key and a value, applies any incoming data transformations as appropriate.
