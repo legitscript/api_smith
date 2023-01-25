@@ -191,11 +191,11 @@ module APISmith
       self.class.key_mapping[key.to_s] || default_key_transformation(key)
     end
 
-    # By default, we transform the key using #to_s, making it useable
+    # By default, we transform the key using #to_sym, making it useable
     # as a hash index. If you want to, for example, add leading underscores,
     # you're do so here.
     def default_key_transformation(key)
-      key
+      key.to_sym
     end
 
     # Given a key and a value, applies any incoming data transformations as appropriate.
