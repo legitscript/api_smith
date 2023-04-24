@@ -115,7 +115,7 @@ describe APISmith::Smash do
 
     it 'should default to transforming via to_s' do
       smash = my_smash.new
-      smash.send(:default_key_transformation, :another).should == 'another'
+      smash.send(:default_key_transformation, :another).should == :another
     end
 
   end
